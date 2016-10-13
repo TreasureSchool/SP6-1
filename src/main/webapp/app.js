@@ -1,22 +1,22 @@
 (function(){
     var app = angular.module("routingPersons", ["ngRoute"]);
-        app.config(function($routeProvider) {
-            $routeProvider
-            .when("/all", {
-                templateUrl: "allPersons.html",
-                controller: "personController as personCtrl"
-            })
-            .when("/new", {
-                templateUrl: "newPerson.html",
-                controller: "personController as personCtrl"
-            })
-            .when("/detail", {
-                templateUrl: "personDetails.html",
-                controller: "personController as personCtrl"
-            })
-            .otherwise({
-                template : "<p>Nothing has been selected,</p>"
-            });
+    app.config(function($routeProvider) {
+        $routeProvider
+        .when("/all", {
+            templateUrl: "allPersons.html",
+            controller: "personController as personCtrl"
+        })
+        .when("/new", {
+            templateUrl: "newPerson.html",
+            controller: "personController as personCtrl"
+        })
+        .when("/detail", {
+            templateUrl: "personDetails.html",
+            controller: "personController as personCtrl"
+        })
+        .otherwise({
+            template : "<p>Nothing has been selected,</p>"
+        });
     });
     var detailId = 0;
     var persons = [
