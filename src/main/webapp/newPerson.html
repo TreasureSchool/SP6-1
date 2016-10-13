@@ -1,16 +1,26 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Person Creation</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="bootstrap.min.css"/>
+        <script type="text/javascript" src="angular.min.js"></script>
+        <script type="text/javascript" src="app.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
     </head>
     <body>
-        <div>TODO write content</div>
+        <form ng-submit="reviewForm.$valid && personCtrl.addPerson(person)" name="reviewForm" novalidate>
+            <h4>Add a person</h4>
+            <fieldset class="form-group">
+              <textarea ng-model="person.name" class="form-control" placeholder="Bob"  title="Name" required></textarea>
+            </fieldset>
+            <fieldset class="form-group">
+              <textarea ng-model="person.age" class="form-control" placeholder="0" title="Age" required></textarea>
+            </fieldset>
+            <fieldset class="form-group">
+              <input type="submit" value="Submit Person"/>
+            </fieldset>
+        </form>
     </body>
 </html>

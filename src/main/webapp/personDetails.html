@@ -1,6 +1,7 @@
+<!DOCTYPE html>
 <html>
     <head>
-        <title>All People</title>
+        <title>Person Details</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="bootstrap.min.css"/>
@@ -9,11 +10,8 @@
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
     </head>
     <body>
-        <h3>Navn</h3>
-        <em class="pull-right">Details</em>
-        <div ng-repeat="person in personCtrl.persons">
-            {{person.name}}
-            <em class="pull-right"><a href="{#/detail" ng-click="personDetail(person.id)">{{person.id}}</a></em>   
-        </div>
+        <h3>{{Persons(getDetails()).name}} Details</h3><br>
+        Name: {{Persons(getDetails()).name}}<br>
+        Age: {{Persons(getDetails()).age}}
     </body>
 </html>
