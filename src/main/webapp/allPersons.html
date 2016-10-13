@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="angular.min.js"></script>
+        <script type="text/javascript" src="app.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+    </head>
+    <body ng-controller="personController as person">
+        <div ng-repeat="person in person.persons">
+            <h3>
+                {[person.name}}
+                <em class="pull-right"><div ng-click="">{{person.id}}</div></em>
+            </h3>
+        </div>
+    </body>
+</html>
