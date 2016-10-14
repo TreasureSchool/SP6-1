@@ -1,17 +1,4 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Person Details</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="bootstrap.min.css"/>
-        <script type="text/javascript" src="angular.min.js"></script>
-        <script type="text/javascript" src="app.js"></script>
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
-    </head>
-    <body>
-        <h3>{{Persons(getDetails()).name}} Details</h3><br>
-        Name: {{Persons(getDetails()).name}}<br>
-        Age: {{Persons(getDetails()).age}}
-    </body>
-</html>
+        <h3>{{PersonCtrl.Persons(personCtrl.id).name}} Details</h3><br>
+        Name: {{PersonCtrl.Persons(personCtrl.id).name}}<br>
+        Age: {{PersonCtrl.Persons(personCtrl.id).age}}
+        {{PersonCtrl.id}}

@@ -1,19 +1,5 @@
-<html>
-    <head>
-        <title>All People</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="bootstrap.min.css"/>
-        <script type="text/javascript" src="angular.min.js"></script>
-        <script type="text/javascript" src="app.js"></script>
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
-    </head>
-    <body>
-        <h3>Navn</h3>
-        <em class="pull-right">Details</em>
+        <h3>Name</h3> <h3>Details</h3>
         <div ng-repeat="person in personCtrl.persons">
-            {{person.name}}
-            <em class="pull-right"><a href="#/detail" ng-click="personDetail(person.id)">{{person.id}}</a></em>   
+            {{person.name}} <a href="#detail" ng-click="personCtrl.personDetail(person.id)">{{person.id}}</a>
         </div>
-    </body>
-</html>
+        
