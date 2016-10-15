@@ -1,5 +1,4 @@
-        <h3>Name</h3> <h3>Details</h3>
-        <div ng-repeat="person in personCtrl.persons">
-            {{person.name}} <a href="#detail" ng-click="personCtrl.personDetail(person.id)">{{person.id}}</a>
-        </div>
-        
+<h3>Name Details</h3>
+<div ng-repeat="person in personCtrl.persons">
+    {{person.name}} <a href="#detail" ng-click="console.log(person.id)">{{person.id}}</a>
+</div>

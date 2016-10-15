@@ -6,7 +6,7 @@
                     templateUrl: "allPersons.html",
                     controller: function () {
                         this.persons = persons;
-                        this.personDetail = function(personId){
+                        this.personDetail = function (personId) {
                             detailId = personId;
                         };
                     },
@@ -14,23 +14,23 @@
                 })
                 .when("/new", {
                     templateUrl: "newPerson.html",
-                    controller: function() {
+                    controller: function () {
                         this.persons = persons;
                         addedPerson = {};
-                        this.addPerson = function(person){
+                        this.addPerson = function (person) {
                             addedPerson = person;
                             addedPerson.id = persons.length + 1;
                             persons.push(addedPerson);
                             addedPerson = {};
-                        };                        
+                        };
                     },
                     controllerAs: "personCtrl"
                 })
                 .when("/detail", {
                     templateUrl: "personDetails.html",
-                    controller: function() {
+                    controller: function () {
                         this.id = detailId;
-                        this.persons = persons;          
+                        this.persons = persons;
                     },
                     controllerAs: "personCtrl"
                 })
