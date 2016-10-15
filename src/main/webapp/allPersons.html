@@ -1,4 +1,15 @@
-<h3>Name Details</h3>
-<div ng-repeat="person in personCtrl.persons">
-    {{person.name}} <a href="#detail" ng-click="personCtrl.setPerson(person)">{{person.id}}</a>
-</div>
+<table class="table">
+    <thead>
+        <tr>
+            <td><h3>Name</h3></td>
+            <td><h3>Details</h3></td>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr ng-repeat="person in personCtrl.persons">
+            <td>{{person.name}}</td>
+            <td><a href="#detail" ng-click="personCtrl.setPerson(person)">{{person.id}}</a></td>
+        </tr>
+    </tbody>
+</table>
