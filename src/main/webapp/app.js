@@ -6,8 +6,8 @@
                     templateUrl: "allPersons.html",
                     controller: function () {
                         this.persons = persons;
-                        this.personDetail = function (personId) {
-                            detailId = personId;
+                        this.setPerson = function (person) {
+                            currentPerson = person;
                         };
                     },
                     controllerAs: "personCtrl"
@@ -24,15 +24,14 @@
                             addedPerson = {};
                         };
                     },
-                    controllerAs: "personCtrl"
+                    controllerAs: "newCtrl"
                 })
                 .when("/detail", {
                     templateUrl: "personDetails.html",
                     controller: function () {
-                        this.id = detailId;
-                        this.persons = persons;
+                        this.person = currentPerson;
                     },
-                    controllerAs: "personCtrl"
+                    controllerAs: "detailCtrl"
                 })
                 .otherwise({
                     template: "<p>Nothing has been selected,</p>"
@@ -43,5 +42,5 @@
         , {id: 2, name: "Peter", age: 23}
         , {id: 3, name: "Hanne", age: 23}
     ];
-    var detailId = 0;
+    var currentPerson;
 })();

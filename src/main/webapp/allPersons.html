@@ -1,4 +1,4 @@
 <h3>Name Details</h3>
 <div ng-repeat="person in personCtrl.persons">
-    {{person.name}} <a href="#detail" ng-click="console.log(person.id)">{{person.id}}</a>
+    {{person.name}} <a href="#detail" ng-click="personCtrl.setPerson(person)">{{person.id}}</a>
 </div>
