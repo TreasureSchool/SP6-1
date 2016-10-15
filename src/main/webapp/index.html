@@ -9,11 +9,17 @@
     </head>
     <body>
         <h1>Persons Exercise</h1>
-        <a href="#all">All Persons</a>
-        <a href="#new">New Person</a>
-        
-        <div ng-view></div>
-        
-        <a href="#/">Back</a>
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="container">
+                <div>
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#all">All People</a></li>
+                        <li><a href="#new">New Person</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="col-md-9" ng-view></div>
     </body>
 </html>

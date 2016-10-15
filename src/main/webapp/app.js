@@ -34,7 +34,7 @@
                     controllerAs: "detailCtrl"
                 })
                 .otherwise({
-                    template: "<p>Nothing has been selected,</p>"
+                    template: "<h1>Nothing has been selected</h1>"
                 });
     });
     var persons = [

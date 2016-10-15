@@ -1,12 +1,14 @@
-<form ng-submit="reviewForm.$valid && newCtrl.addPerson(person)" name="reviewForm" novalidate>
+<div class="col-md-3" style="border: thin lightblue solid; border-radius: 5px;padding: 1em;">
+<form action="#all" ng-submit="reviewForm.$valid && newCtrl.addPerson(person)" name="reviewForm" novalidate>
     <h4>Add a person</h4>
     <fieldset class="form-group">
-        <textarea ng-model="person.name" class="form-control" placeholder="Bob"  title="Name" required></textarea>
+        <input type="text" ng-model="person.name" class="form-control" placeholder="Bob"  title="Name" required>
     </fieldset>
     <fieldset class="form-group">
-        <textarea ng-model="person.age" class="form-control" placeholder="0" title="Age" required></textarea>
+        <input type="number" ng-model="person.age" class="form-control" placeholder="0" title="Age" required>
     </fieldset>
     <fieldset class="form-group">
         <input type="submit" value="Submit Person"/>
     </fieldset>
 </form>
+</div>
